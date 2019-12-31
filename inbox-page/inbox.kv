@@ -1,0 +1,64 @@
+#:kivy 1.10.0
+#:import hex kivy.utils.get_color_from_hex
+
+<InboxScreen>:
+	id: inbox_main
+	orientation: "vertical"
+
+	BoxLayout:
+		size_hint_y: None
+		height: 50
+		canvas.before:
+	        Color:
+	            rgba: hex("#c78f00")
+	        Rectangle:
+	            pos: self.pos
+	            size: self.size
+
+	    canvas.after:
+	    	Color:
+	    		rgba: hex("#fff14e")
+	    	Rectangle:
+	    		pos: self.pos
+	    		size: (75, 100)
+	    # add curved line
+
+	    Label:
+			text: "Dynamic Header"
+			color: 0, 0, 0, 1
+			bold: True
+
+#Body starts
+	
+	BoxLayout:
+		size_hint_x: None
+		width: 75
+		canvas.before:
+			Color:
+				rgba: hex("#fff14e")
+			Rectangle:
+				pos: self.pos
+				size: self.size
+
+
+		# add the menu icons
+
+
+
+#Body ends
+
+	BoxLayout:
+		size_hint_y: None
+		height: 25
+
+		canvas.before:
+			Color:
+				rgba: hex("#ffbf00")
+			Rectangle:
+				pos: self.pos
+				size: self.size
+
+		Label:
+			text: "Dynamic footer"
+			color: 0, 0, 0, 1
+
