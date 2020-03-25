@@ -103,6 +103,10 @@ def refresh_authorization(google_client_id, google_client_secret, refresh_token)
 
 if __name__ == '__main__':
     if GOOGLE_REFRESH_TOKEN is None:
+        '''
+            If GOOGLE REFRESH TOKEN is not generated then this code is executed to get the token
+            This token is necessary to access a users gmail account       
+        '''
         print('No refresh token found, obtaining one')
         refresh_token, access_token, expires_in = get_authorization(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET)
         print('Set the following as your GOOGLE_REFRESH_TOKEN:', refresh_token)
