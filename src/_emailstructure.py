@@ -2,7 +2,7 @@ import email
 
 class EmailStructure:
 	"""docstring for EmailStruct"""
-	#divide email into from, content and other meta data 
+	#divide email into from, content and other meta data
 	def __init__(self, email):
 		self.email = email
 
@@ -17,4 +17,3 @@ class EmailStructure:
 
 	def extractOtherMetaData(self, email):
 		pass
-
