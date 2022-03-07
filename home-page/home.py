@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter.filedialog import askopenfile
 from tkinter.filedialog import asksaveasfile
 
+## have to change this project to Java or Rust
 
 class Window(Frame):
 	def __init__(self, master = None):
